@@ -1,0 +1,93 @@
+*, 
+*::before, 
+*::after{
+box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;;
+    color:hsl(229, 6%, 66%);
+    padding-block-end: 5rem;
+   
+}
+header{
+    text-align: center;
+    margin-block: 4rem;
+}
+header p{
+    font-size: 1.125rem;
+    line-height: 1.5;
+}
+main{
+    max-width: 1180px;
+    width: 90%;
+    margin: auto;
+    
+}
+h1{
+    font-weight: 200;
+    color:hsl(234, 10%, 40%);
+}
+
+.emphasized-text{
+    font-weight: 600;
+}
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "... two ..."
+        "one two four"
+        "one three four"
+        "... three ...";
+    gap: 2rem;
+}
+
+
+.card{
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3);
+    border-top: 0.325rem solid;
+    border-radius: 0.5rem;
+    padding: 2rem;
+}
+.card-title{
+    color:hsl(234, 10%, 40%);
+    margin: 0;
+    font-size: 1.5rem;
+}
+.supervisor-card{
+    grid-area: one;
+    border-color: hsl(180, 62%, 55%);
+    
+}
+.team-builder-card{
+    grid-area: two;
+    border-color: hsl(0, 78%, 62%);
+}
+.karma-card{
+    grid-area: three;
+    border-color: hsl(34, 97%, 64%);
+}
+.calculator-card{
+    grid-area: four;
+    border-color: hsl(212, 86%, 64%);
+}
+
+.card img{
+    display: block;
+    margin-left: auto;
+}
+
+@media (max-width:900px) {
+    .wrapper {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "one"
+            "two"
+            "three"
+            "four";
+    }
+    
+}
